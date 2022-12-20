@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class CreateCustomerComponent {
 
+  createCustomerForm:any = {
+    name: "",
+    lastName: "",
+    address: "",
+    email: "",
+    phone: ""    
+  }
+
+  createCustomer(){
+    console.log(this.createCustomerForm)
+  }
+
 }
