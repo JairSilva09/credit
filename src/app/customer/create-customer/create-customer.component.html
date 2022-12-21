@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row mt-5">
-        <div class="col-md-4 offset-md-4 d-flex justify-content-center">
+        <div class="col-md-4 offset-md-4 d-flex justify-content-around">
             <h2>Create customer</h2>
         </div>
     </div>
@@ -27,9 +27,13 @@
                     <label for="address">Address:</label>
                     <input type="text" [(ngModel)]="createCustomerForm.address" name="address" class="form-control" id="address">
                 </div>
-                <button type="submit" (click)="createCustomer()" class="btn btn-primary mt-1">Submit</button>
+                <div class="d-flex justify-content-around">
+                    <button type="submit" (click)="createCustomer()" class="btn btn-primary mt-1">Submit</button>
+                    <a routerLink="customers">List Customers</a>
+                </div>
+                
             </form>            
-        </div>
+        </div>        
     </div>
 </div>
 
