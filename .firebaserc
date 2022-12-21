@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "creditdbapp"
+  },
+  "targets": {
+    "creditdbapp": {
+      "hosting": {
+        "credit": [
+          "creditdbapp"
+        ]
+      }
+    }
+  }
+}

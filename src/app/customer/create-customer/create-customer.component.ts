@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CustomerService } from '../customer.service';
+
 
 @Component({
   selector: 'app-create-customer',
@@ -6,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-customer.component.scss']
 })
 export class CreateCustomerComponent {
+
+  constructor(private customerService: CustomerService) { }
+  
 
   createCustomerForm:any = {
     name: "",
@@ -15,8 +20,9 @@ export class CreateCustomerComponent {
     phone: ""    
   }
 
-  createCustomer(){
-    console.log(this.createCustomerForm)
+  async createCustomer(){
+    const response = await this.customerService.addCustomer(this.createCustomerForm);
   }
+  
 
 }
